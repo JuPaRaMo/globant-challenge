@@ -13,7 +13,7 @@ BEGIN TRY
  
 	-- import the file
 	BULK INSERT departments
-	FROM 'departments.CSV'
+	FROM 'C:\CSV\departments.csv'
 	WITH
 	(
 			FORMAT='CSV',

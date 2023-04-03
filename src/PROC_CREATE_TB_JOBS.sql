@@ -14,7 +14,7 @@ BEGIN TRY
  
 	-- import the file
 	BULK INSERT jobs
-	FROM 'jobs.CSV'
+	FROM 'C:\CSV\jobs.csv'
 	WITH
 	(
 			FORMAT='CSV',

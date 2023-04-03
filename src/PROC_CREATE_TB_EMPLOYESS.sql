@@ -16,7 +16,7 @@ BEGIN TRY
  
 	-- import the file
 	BULK INSERT hired_employees
-	FROM 'hired_employees.CSV'
+	FROM 'C:\CSV\hired_employees.csv'
 	WITH
 	(
 			FORMAT='CSV',
