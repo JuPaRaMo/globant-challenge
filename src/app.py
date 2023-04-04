@@ -278,6 +278,7 @@ def add_data():
         elif request.json['table'] == 'hired_employees':
             for row in request.json['data']:
                 is_valid_query, message = validate_hired_employees(row)
+                print(is_valid_query, message)
                 if is_valid_query:
                     sql= """INSERT INTO [master].[dbo].[hired_employees](id, name, datetime, department_id, job_id) 
                             VALUES ({0},'{1}', '{2}', {3}, {4})""".format(row['id'],row['name'], row['datetime'], row['department_id'], row['job_id'])
@@ -309,30 +310,32 @@ def validate_jobs(job_row):
     is_query_valid = True
     job_message = ""
     if not "id" in job_row or not job_row['id']:
-        is_valid_query = False
+        is_query_valid = False
         job_message = "Missing Field ID on Jobs"
     if not "job" in job_row or not job_row['job']:   
-        is_valid_query = False
+        is_query_valid = False
         job_message = "Missing Field Job on Jobs"
     return is_query_valid, job_message
 
 def validate_hired_employees(hired_employees_row):
     is_query_valid = True
     hired_message = ""
+    print(hired_employees_row)
+    print(not "name" in hired_employees_row)
     if not "id" in hired_employees_row or not hired_employees_row['id']:
-        is_valid_query = False
+        is_query_valid = False
         hired_message = "Missing Field ID on Hired employees"
     if not "name" in hired_employees_row or not hired_employees_row['name']:   
-        is_valid_query = False
+        is_query_valid = False
         hired_message = "Missing Field Name on Hired employees"
     if not "datetime" in hired_employees_row or not hired_employees_row['datetime']:   
-        is_valid_query = False
+        is_query_valid = False
         hired_message = "Missing Field Datetime on Hired employees"
     if not "department_id" in hired_employees_row or not hired_employees_row['department_id']:   
-        is_valid_query = False
+        is_query_valid = False
         hired_message = "Missing Field Department_id on Hired employees"
     if not "job_id" in hired_employees_row or not hired_employees_row['job_id']:   
-        is_valid_query = False
+        is_query_valid = False
         hired_message = "Missing Field Job_id on Hired employees"
     return is_query_valid, hired_message
 
