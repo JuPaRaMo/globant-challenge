@@ -70,7 +70,6 @@ To create a backup for a table, the specific table is expected in the body. The 
 ```
 {
  "table": "jobs"
- ]
 }
 ```
 As result an avro file will be created in the root of the project for the specific table.
@@ -80,7 +79,6 @@ To restore a table from a backup file, the specific table is expected in the bod
 ```
 {
  "table": "hired_employees"
- ]
 }
 ```
 `GET /quarter-hires`
