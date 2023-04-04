@@ -13,9 +13,10 @@
  
  2. Tables Creation
  - Open your SQL Server Management Studio, copy and execute the following store procedures:
-    * PROC_READ_TABLE_DEPARTMENT
-    * PROC_READ_TABLE_EMPLOYEES
-    * PROC_READ_TABLE_JOBS
+    * PROC_CREATE_ERROR_TABLE
+    * PROC_CREATE_TABLE_DEPARTMENT
+    * PROC_CREATE_TABLE_EMPLOYEES
+    * PROC_CREAET_TABLE_JOBS
   
  Now you have the tables migrated from the csv files.
  
