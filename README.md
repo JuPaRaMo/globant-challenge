@@ -70,6 +70,40 @@ To add data to any table this service is expecting the specific table and the da
  ]
 }
 ```
+```
+{
+ "table": "jobs",
+ "data": [ 
+  {
+   "id": 1,
+   "job": "New Job"
+  }
+ ]
+}
+```
+```
+{
+    "table": "hired_employees",
+    "data": [
+        {
+            "id": 2004,
+            "name": "Susan",
+            "datetime": "2021-11-07T02:48:42Z",
+            "department_id": 12,
+            "job_id": 10
+        },
+        {
+            "id": 2000,
+            "name": "John",
+            "datetime": "2021-11-07T02:48:42Z",
+            "department_id": 6,
+            "job_id": 2
+        }
+    ]
+    
+}
+```
+In case there aremissing fields or the properties are not correct the api will create an entry on the error_log with the error message related.
 
 `POST /backup`
 To create a backup for a table, the specific table is expected in the body. The options for table are: "departments", "jobs", "hired_employees"
