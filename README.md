@@ -17,7 +17,12 @@
     * PROC_CREATE_TABLE_DEPARTMENT
     * PROC_CREATE_TABLE_EMPLOYEES
     * PROC_CREAET_TABLE_JOBS
-  
+ 
+ 
+ You can execute the stored procedures this way
+
+![SPFLASK](https://user-images.githubusercontent.com/30596170/229802623-c159f116-d10f-4d77-be09-328fb9365be3.png)
+
  Now you have the tables migrated from the csv files.
  
  3. Setup python project
